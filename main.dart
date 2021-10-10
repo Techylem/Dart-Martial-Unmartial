@@ -1,11 +1,5 @@
 import 'dart:typed_data';
 import 'dart:core';
-import 'dart:math';
-
-// toBigUnsignedInt64(int number) => BigInt.from(number).toUnsigned(64);
-
-// Uint8List bigIntToUint8List(BigInt bigInt) =>
-//     bigIntToByteData(bigInt).buffer.asUint8List();
 
 List<int> martial(int number) {
   const int radix = 8;
@@ -21,7 +15,7 @@ List<int> martial(int number) {
 }
 
 int unmartial(List<int> bytes) {
-  // ByteData data = Uint8List.fromList(array).buffer.asByteData();
+  //  https://github.com/appditto/nanodart/blob/master/lib/src/util.dart
   BigInt result = BigInt.from(0);
   for (int i = 0; i < bytes.length; i++) {
     result += BigInt.from(bytes[bytes.length - i - 1]) << (8 * i);
