@@ -7,7 +7,7 @@ List<int> martial(int number) {
   var _bigInt = bigInt;
   /*  Explaination
     Loop through bytes from left to right (0 to N)
-      Step 1. Set each byte with 1 byte from right
+      Step 1. Set each byte with 1 byte(of given number) from right
         i.e. In binary below
         10111110001100100001001000111111111100011
 
